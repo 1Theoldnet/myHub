@@ -1,0 +1,23 @@
+@keyframes show-header {
+    from {
+        transform: translateY(-65px) scale(0.5);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+header {
+    padding: 5;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-radius: 0px 0px 10px 10px;
+    left: 0;
+    align-items: center;
+    animation: show-header linear 400ms;
+    justify-content: space-between;
+    box-shadow: 0px 0px 12px black;
+}

@@ -1,0 +1,26 @@
+.btn-dis {
+    padding: 5px;
+    color: white;
+    background: purple;
+    border: 0;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn {
+    padding: 5px;
+    color: white;
+    background: purple;
+    border: 0;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 250ms all;
+
+    &:hover {
+        transform: rotate(-5deg);
+        box-shadow: 5px 5px 15px black;
+    }
+}
