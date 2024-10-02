@@ -1,12 +1,89 @@
+@keyframes search-bar-show {
+    from {
+        transform: translateX(-210px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
 .search-bar-show {
     position: fixed;
     top: 0;
     left: 0;
     background: white;
     padding: 5;
-    width: 150px;
+    border-radius: 0px 10px 10px 0px;
+    width: 200px;
     height: 100vh;
     box-shadow: 0px 0px 10px black;
     transition: 400ms all;
     z-index: 2;
+    overflow: auto;
+    animation: search-bar-show linear 400ms;
+
+    .search-div {
+        padding: 5;
+        background: rgb(230, 230, 230);
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+
+        input {
+            width: 50px;
+            border: 0;
+            outline: none;
+            border-radius: 5px;
+            padding: 5px;
+            margin-left: 5px;
+            transition: 250ms all;
+
+            &:focus {
+                width: 130px;
+            }
+        }
+
+        .close-div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4.2px;
+            margin-left: 5px;
+            background: white;
+            border-radius: 5px;
+            transition: 250ms all;
+
+            &:hover {
+                color: white;
+                background: red;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .users {
+        margin-top: 5px;
+        display: grid;
+        gap: 5px;
+
+        .user {
+            padding: 5px;
+            background: rgb(214, 214, 214);
+            display: flex;
+            border-radius: 8px;
+            align-items: center;
+            justify-content: space-between;
+
+            img {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+            }
+
+            b {
+                word-wrap: break-word;
+            }
+        }
+    }
 }

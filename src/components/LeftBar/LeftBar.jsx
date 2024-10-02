@@ -1,41 +1,18 @@
 import './LeftBar.scss'
 import { Link } from 'react-router-dom'
+import { navigations } from './navigations'
+import { IoIosClose } from "react-icons/io"
 
-export const LeftBar = () => {
-    const navigations = [
-        {
-            text: 'Главная',
-            path: '/'
-        },
-        {
-            text: 'Игрушки',
-            path: '/toys'
-        },
-        {
-            text: 'Статьи',
-            path: '/posts'
-        },
-        {
-            text: 'Друзья',
-            path: '/frends'
-        },
-        {
-            text: 'Code',
-            path: '/code'
-        },
-        {
-            text: 'Мой профиль',
-            path: '/profile'
-        },
-        {
-            text: 'Выйти',
-            path: '/exit'
-        }
-    ]
-
+export const LeftBar = ({ setOpenMenu }) => {
     return (
-        <div className="left-bar">
-            {navigations.map(navigation => <Link to={navigation.path}><button>{navigation.text}</button></Link>)}
-        </div>
+        <>
+            <div className="left-bar">
+                <div className="close-div" onClick={() => setOpenMenu(false)}><IoIosClose /></div>
+                <div className="navigations">
+                    {navigations.map(navigation => <Link to={navigation.path}><button className='navigation'>{navigation.text}</button></Link>)}
+                </div>
+            </div>
+            <div onClick={() => setOpenMenu(false)} className="black-div"></div>
+        </>
     )
 }

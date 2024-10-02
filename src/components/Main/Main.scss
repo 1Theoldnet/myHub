@@ -17,6 +17,7 @@
     position: absolute;
     margin: 5px;
     display: flex;
+    z-index: -1;
     width: calc(100% - 10px);
     height: calc(100vh - 85px);
     flex-wrap: nowrap;
