@@ -15,12 +15,15 @@
     background: purple;
     border: 0;
     font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 5px;
     cursor: pointer;
-    transition: 250ms all;
+    transition: 450ms all;
 
     &:hover {
-        transform: rotate(-5deg);
         box-shadow: 5px 5px 15px black;
+        background: linear-gradient(180deg, pink, purple);
     }
 }

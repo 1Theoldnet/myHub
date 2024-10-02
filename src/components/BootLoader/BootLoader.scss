@@ -1,0 +1,43 @@
+@keyframes loader-ani {
+    from {
+        transform: rotate(0deg) scale(0.8);
+    }
+
+    to {
+        transform: rotate(360deg) scale(0.8);
+    }
+}
+
+.boot-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: rgb(34, 34, 34);
+
+    .boot {
+        padding: 5px;
+
+        img {
+            border-radius: 20px;
+            width: 130px;
+        }
+
+        .load {
+            margin-top: 100px;
+            padding: 5px;
+
+            .loader {
+                width: 80px;
+                border: 4px solid white;
+                border-top: 4px solid rgb(34, 34, 34);
+                height: 80px;
+                border-radius: 50%;
+                margin-left: 15px;
+                background: rgb(34, 34, 34);
+                animation: loader-ani linear infinite 900ms;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.inp-dis {
+    padding: 3px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 12px rgb(252, 55, 55);
+    outline: none;
+    cursor: not-allowed;
+}
+
+.inp {
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 12px black;
+    outline: none;
+    transition: 250ms all;
+
+    &:focus {
+        transform: scale(1.2);
+    }
+}
