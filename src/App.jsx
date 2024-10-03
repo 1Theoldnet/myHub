@@ -7,7 +7,7 @@ import { LeftBar } from './components/LeftBar/LeftBar'
 
 export const App = () => {
   const [loader, setLoader] = useState(true)
-  const [login, setLogin] = useState(true)
+  const [login, setLogin] = useState(false)
   const [users, setUsers] = useState([])
   const [user, setUser] = useState(null)
   const [openMenu, setOpenMenu] = useState(false)
