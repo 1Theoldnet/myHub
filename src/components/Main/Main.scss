@@ -16,8 +16,8 @@
     animation: show-main linear 400ms;
     position: absolute;
     margin: 5px;
+    overflow: auto;
     display: flex;
-    z-index: -1;
     width: calc(100% - 10px);
     height: calc(100vh - 85px);
     flex-wrap: nowrap;

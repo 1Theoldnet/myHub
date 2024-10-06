@@ -12,16 +12,20 @@ export const navigations = [
         path: '/posts'
     },
     {
-        text: 'Друзья',
-        path: '/frends'
-    },
-    {
-        text: 'Code',
-        path: '/code'
-    },
-    {
         text: 'Мой профиль',
         path: '/profile'
+    },
+    {
+        text: 'Настройки',
+        path: '/settings'
+    },
+    {
+        text: 'Справка',
+        path: '/help'
+    },
+    {
+        text: 'Код',
+        path: '/code'
     },
     {
         text: 'Выйти',

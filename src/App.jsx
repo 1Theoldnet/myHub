@@ -4,6 +4,7 @@ import { Main } from './components/Main/Main'
 import { Login } from './pages/Login/Login'
 import { BootLoader } from './components/BootLoader/BootLoader'
 import { LeftBar } from './components/LeftBar/LeftBar'
+import { CreateBar } from './components/CreateBar/CreateBar'
 
 export const App = () => {
   const [loader, setLoader] = useState(true)
@@ -11,6 +12,8 @@ export const App = () => {
   const [users, setUsers] = useState([])
   const [user, setUser] = useState(null)
   const [openMenu, setOpenMenu] = useState(false)
+  const [openMenuCreate, setOpenMenuCreate] = useState(false)
+  const [x, setX] = useState(null)
 
   if(loader) return <BootLoader setLoader={setLoader} />
 
@@ -18,8 +21,9 @@ export const App = () => {
 
   return (
     <>
-      <Header openMenu={openMenu} setOpenMenu={setOpenMenu} />
+      <Header setX={setX} users={users} user={user} openMenuCreate={openMenuCreate} setOpenMenuCreate={setOpenMenuCreate} openMenu={openMenu} setOpenMenu={setOpenMenu} />
       {openMenu && <LeftBar setOpenMenu={setOpenMenu} />}
+      {openMenuCreate && <CreateBar x={x} setOpenMenuCreate={setOpenMenuCreate} />}
       <Main />
     </>
   )
