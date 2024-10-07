@@ -24,7 +24,7 @@ export const Login = ({ users, setUsers, setLogin, setUser }) => {
                     <Input placeholder='Почта' value={objInps.email} onChange={e => setObjInps({ ...objInps, email: e.target.value })} />
                     <Input placeholder='Пароль' value={objInps.password} onChange={e => setObjInps({ ...objInps, password: e.target.value })} />
                     <Button onClick={() => {
-                        setUsers([{ id: users.length + 1, avatar: objInps.avatar, name: objInps.name, email: objInps.email, password: objInps.password }, ...users ])
+                        setUsers([{ id: users.length + 1, avatar: objInps.avatar, name: objInps.name, email: objInps.email, password: objInps.password, modals: [], toys: [], posts: [] }, ...users ])
                         setObjInps({ avatar: '', name: '', email: '', password: '' })
                     }}><div style={{ marginRight: 5 }}><IoIosAdd /></div>Создать</Button>
                 </div>

@@ -14,12 +14,11 @@
     box-shadow: 0px 0px 12px black;
     border-radius: 10px;
     animation: show-main linear 400ms;
-    position: absolute;
+    position: fixed;
     margin: 5px;
     overflow: auto;
     display: flex;
     width: calc(100% - 10px);
     height: calc(100vh - 85px);
-    flex-wrap: nowrap;
     background: white;
 }

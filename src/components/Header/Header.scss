@@ -32,6 +32,10 @@ header {
         &:hover {
             background: rgb(220, 220, 220);
         }
+
+        &:active {
+            transform: scale(0.5);
+        }
     }
 
     .user {

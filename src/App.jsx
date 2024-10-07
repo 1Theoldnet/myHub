@@ -22,9 +22,9 @@ export const App = () => {
   return (
     <>
       <Header setX={setX} users={users} user={user} openMenuCreate={openMenuCreate} setOpenMenuCreate={setOpenMenuCreate} openMenu={openMenu} setOpenMenu={setOpenMenu} />
-      {openMenu && <LeftBar setOpenMenu={setOpenMenu} />}
-      {openMenuCreate && <CreateBar x={x} setOpenMenuCreate={setOpenMenuCreate} />}
-      <Main />
+      {openMenu && <LeftBar setOpenMenu={setOpenMenu} setLogin={setLogin} />}
+      {openMenuCreate && <CreateBar users={users} user={user} x={x} setOpenMenuCreate={setOpenMenuCreate} />}
+      <Main users={users} user={user} />
     </>
   )
 }
